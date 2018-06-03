@@ -128,7 +128,7 @@ class homeLayout extends Component {
                   <Col><Notificaciones getNotificaciones={this.props.getNotificaciones} changeCaller={this.changeCaller}  changeId={this.changeId} deleteNotificacion={this.props.deleteNotificacion} cleanNotificaciones={this.props.cleanNotificaciones} usuario={this.props.usuario} notificaciones={this.props.notificaciones} /><Link to=''><Icon style={Style.trigger} type='logout' onClick={()=>{this.props.sessionlogout()}}/></Link></Col>
                 </Row>
               </Header>
-              <Content style={Style.content}>
+              <Content style={{...Style.content,minWidth:"70vw"}}>
                 <Switch>
                 <Route exact path='/home/espera' render={this.renderEspera}/>
                 <Route exact path='/home/visita' render={this.renderVisita}/>

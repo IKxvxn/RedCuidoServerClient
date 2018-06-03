@@ -48,7 +48,7 @@ class bontonDescarga extends React.Component {
       );
     
     return(
-      <Row type="flex" justify="start">
+      <Row type="flex" justify="space-between">
         {(this.state.size==="0")?<Col md={20} xs={24}><Search placeholder="Buscar sólo en esta lista" onSearch={value => {this.props.filtrarCampos(value);this.props.changeId("")}}/></Col>:
         <Popover placement="bottomLeft" title={this.props.filtro.length===1?this.props.filtro.length+" Encontrado":this.props.filtro.length+" Encontrados"} content={content} trigger="focus">
           <Col md={20} xs={24}>
@@ -57,8 +57,8 @@ class bontonDescarga extends React.Component {
         </Popover>}
         <Col md={4} xs={24}>
           <Radio.Group style={{padding:"0 0 0 1vw",width:"10rem"}} value={this.state.size} onChange={this.handleSizeChange}>
-            <Radio.Button style={{width:"50%"}} value="0">Esta</Radio.Button>
-            <Radio.Button style={{width:"50%"}} value="1">Todas</Radio.Button>
+            <Radio.Button style={{width:"45%"}} value="0">Esta</Radio.Button>
+            <Radio.Button style={{width:"45%"}} value="1">Todas</Radio.Button>
           </Radio.Group>
         </Col>
       </Row>)
