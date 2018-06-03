@@ -2,6 +2,7 @@ import React from "react";
 import { Badge, Button, List, Row,Col, Popover,Icon } from 'antd';
 import { Link } from 'react-router-dom'
 import * as Localizacion from '../../assets/localizacion'
+import * as Style from '../../style/home'
 var dateFormat = require('dateformat');
 const NOT = "NOT"
 
@@ -146,7 +147,11 @@ class bontonDescarga extends React.Component {
     return( 
       <Popover placement="bottomRight" title={ <Button type="danger" ghost onClick={() =>{this.props.cleanNotificaciones(this.props.usuario)}}>Limpiar Notificaciones</Button>} content={content} trigger="click">
         <Badge count={this.props.notificaciones.length}>
-            <Button shape="circle" type="danger" onClick={()=>this.props.getNotificaciones(this.props.usuario)}> <Icon type="notification" /></Button>
+            <Icon
+                style={Style.trigger}
+                type='notification'
+                onClick={()=>this.props.getNotificaciones(this.props.usuario)}
+            />
         </Badge>
       </Popover>)
     }

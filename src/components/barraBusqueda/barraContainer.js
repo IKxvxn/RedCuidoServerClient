@@ -49,16 +49,16 @@ class bontonDescarga extends React.Component {
     
     return(
       <Row type="flex" justify="start">
-        {(this.state.size==="0")?<Col sm={20}><Search placeholder="Buscar sólo en esta lista" onSearch={value => {this.props.filtrarCampos(value);this.props.changeId("")}}/></Col>:
+        {(this.state.size==="0")?<Col md={20} xs={24}><Search placeholder="Buscar sólo en esta lista" onSearch={value => {this.props.filtrarCampos(value);this.props.changeId("")}}/></Col>:
         <Popover placement="bottomLeft" title={this.props.filtro.length===1?this.props.filtro.length+" Encontrado":this.props.filtro.length+" Encontrados"} content={content} trigger="focus">
-          <Col sm={20}>
+          <Col md={20} xs={24}>
               <Search onSearch={value=>this.props.getFiltered(this.props.usuario,value)} defaultValue={this.props.query} placeholder="Buscar en todas las listas"/>
           </Col>    
         </Popover>}
-        <Col sm={4}>
-          <Radio.Group style={{padding:"0 0 0 1vw"}} value={this.state.size} onChange={this.handleSizeChange}>
-            <Radio.Button value="0">Esta</Radio.Button>
-            <Radio.Button value="1">Todas</Radio.Button>
+        <Col md={4} xs={24}>
+          <Radio.Group style={{padding:"0 0 0 1vw",width:"10rem"}} value={this.state.size} onChange={this.handleSizeChange}>
+            <Radio.Button style={{width:"50%"}} value="0">Esta</Radio.Button>
+            <Radio.Button style={{width:"50%"}} value="1">Todas</Radio.Button>
           </Radio.Group>
         </Col>
       </Row>)
