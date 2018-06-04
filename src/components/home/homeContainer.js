@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Menu, Icon, Row, Col } from 'antd';
+import { Layout, Menu, Icon, Row, Col, Button } from 'antd';
 import { connect } from 'react-redux'
 import { Route, Switch, Link, withRouter } from 'react-router-dom'
 import Logo from '../../images/logo.png'
@@ -125,7 +125,7 @@ class homeLayout extends Component {
                       onClick={() =>this.toggle(!this.state.collapsed)}
                     />
                   </Col>
-                  <Col><Notificaciones getNotificaciones={this.props.getNotificaciones} changeCaller={this.changeCaller}  changeId={this.changeId} deleteNotificacion={this.props.deleteNotificacion} cleanNotificaciones={this.props.cleanNotificaciones} usuario={this.props.usuario} notificaciones={this.props.notificaciones} /><Link to=''><Icon style={Style.trigger} type='logout' onClick={()=>{this.props.sessionlogout()}}/></Link></Col>
+                  <Col><Notificaciones getNotificaciones={this.props.getNotificaciones} changeCaller={this.changeCaller}  changeId={this.changeId} deleteNotificacion={this.props.deleteNotificacion} cleanNotificaciones={this.props.cleanNotificaciones} usuario={this.props.usuario} notificaciones={this.props.notificaciones} /><Link to=''><Button shape="circle" type="danger" onClick={()=>{this.props.sessionlogout()}}> <Icon type="logout" /></Button></Link></Col>
                 </Row>
               </Header>
               <Content style={{...Style.content,minWidth:"70vw"}}>
