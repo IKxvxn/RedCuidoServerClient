@@ -145,9 +145,9 @@ class bontonDescarga extends React.Component {
       );
     
     return( 
-      <Popover placement="bottomRight" title={ <Button type="danger" ghost onClick={() =>{this.props.cleanNotificaciones(this.props.usuario)}}>Limpiar Notificaciones</Button>} content={content} trigger="click">
+      <Popover placement="bottomRight"  title={ <Button type="danger" ghost onClick={() =>{this.props.cleanNotificaciones(this.props.usuario)}}>Limpiar Notificaciones</Button>} content={content} trigger="click">
         <Badge count={this.props.notificaciones.length}>
-            <Button shape="circle" type="danger" onClick={()=>this.props.getNotificaciones(this.props.usuario)}> <Icon type="notification" /></Button>
+            <Button shape="circle" type="danger" onClick={()=>this.props.getNotificaciones(this.props.usuario)}> <Icon style={{marginRight:"0.9rem"}} type="notification" /></Button>
         </Badge>
       </Popover>)
     }

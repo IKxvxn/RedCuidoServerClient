@@ -125,7 +125,7 @@ class homeLayout extends Component {
                       onClick={() =>this.toggle(!this.state.collapsed)}
                     />
                   </Col>
-                  <Col><Notificaciones getNotificaciones={this.props.getNotificaciones} changeCaller={this.changeCaller}  changeId={this.changeId} deleteNotificacion={this.props.deleteNotificacion} cleanNotificaciones={this.props.cleanNotificaciones} usuario={this.props.usuario} notificaciones={this.props.notificaciones} /><Link to=''><Button shape="circle" type="danger" onClick={()=>{this.props.sessionlogout()}}> <Icon type="logout" /></Button></Link></Col>
+                  <Col><Notificaciones getNotificaciones={this.props.getNotificaciones} changeCaller={this.changeCaller}  changeId={this.changeId} deleteNotificacion={this.props.deleteNotificacion} cleanNotificaciones={this.props.cleanNotificaciones} usuario={this.props.usuario} notificaciones={this.props.notificaciones} /><span style={{marginRight:"1rem"}}/><Link to=''><Button shape="circle" type="danger" onClick={()=>{this.props.sessionlogout()}}> <Icon style={{marginRight:"0.9rem"}} type="logout" /></Button></Link><span style={{marginRight:"1rem"}}/></Col>
                 </Row>
               </Header>
               <Content style={{...Style.content,minWidth:"70vw"}}>
