@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Layout, Menu, Icon, Row, Col, Button } from 'antd';
 import { connect } from 'react-redux'
 import { Route, Switch, Link, withRouter } from 'react-router-dom'
-import Logo from '../../images/logo.png'
+import Logo from '../../images/logov2.png'
 import * as homeActions from './homeActions'
 import * as loginActions from '../login/loginActions'
 import * as Style from '../../style/home'
