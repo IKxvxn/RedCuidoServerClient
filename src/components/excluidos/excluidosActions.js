@@ -1,7 +1,7 @@
 import { message } from 'antd';
 import * as Mensajes from '../../assets/mensajes'
 
-const API_URL = 'https://reddecuidoserver.herokuapp.com/home'
+const API_URL = 'http://localhost:8079/home'
 
 //variables dedicadas a acciones del reducer
 const NEW_EXCLUIDO_REQUEST = 'NEW_EXCLUIDO_REQUEST'

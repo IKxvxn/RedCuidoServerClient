@@ -1,7 +1,7 @@
 import { message } from 'antd';
 import * as Mensajes from '../../assets/mensajes'
 
-const API_URL = 'https://reddecuidoserver.herokuapp.com/home'
+const API_URL = 'http://localhost:8079/home'
 
 const NEW_ACTIVO_REQUEST = 'NEW_ACTIVO_REQUEST'
 const NEW_ACTIVO_SUCCESS = 'NEW_ACTIVO_SUCCESS'

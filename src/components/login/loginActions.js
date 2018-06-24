@@ -2,7 +2,7 @@ import { message } from 'antd';
 import * as Mensajes from '../../assets/mensajes'
 
 //const API_URL = 'http://localhost:8079/auth'
-const API_URL = 'https://reddecuidoserver.herokuapp.com/auth'
+const API_URL = 'http://localhost:8079/auth'
 
 const NEW_LOGIN_REQUEST = 'NEW_LOGIN_REQUEST'
 const NEW_LOGIN_SUCCESS = 'NEW_LOGIN_SUCCESS'
