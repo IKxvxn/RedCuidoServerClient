@@ -394,7 +394,7 @@ class editForm extends React.Component {
           {...formItemLayout}
           label="Sede"
         >
-          {getFieldDecorator('sede',{initialValue:"Desamparados"})(
+          {getFieldDecorator('sede',{initialValue:"Heredia"})(
             <Select disabled={!this.state.edit}>
               <Option value="Desamparados">Desamparados</Option>
               <Option value="Heredia">Heredia</Option>
